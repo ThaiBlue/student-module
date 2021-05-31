@@ -1,0 +1,64 @@
+<odoo>
+    <data>
+          <!-- Students -->
+          <record id="student_0" model="web_school.student">
+            <field name="name">Adam</field>
+            <field name="gender">Male</field>
+            <field name="birth_date" eval="datetime.date(2000,1,1)"/>
+            <field name="faculty">Information Technology</field>
+            <!-- <field name="class_ids" eval="[class_0, class_1]"/> -->
+          </record>
+
+          <record id="student_1" model="web_school.student">
+            <field name="name">Eve</field>
+            <field name="gender">Female</field>
+            <field name="birth_date" eval="datetime.date(2000,1,2)"/>
+            <field name="faculty">Economics</field>
+            <!-- <field name="class_ids" eval="[class_1, class_2]"/> -->
+          </record>
+
+          <record id="student_2" model="web_school.student">
+            <field name="name">Adam</field>
+            <field name="gender">Male</field>
+            <field name="birth_date" eval="datetime.date(2000,1,21)"/>
+            <field name="faculty">Engineer</field>
+            <!-- <field name="class_ids" eval="[class_0, class_2]"/> -->
+          </record>
+
+          <record id="student_3" model="web_school.student">
+            <field name="name">Adam</field>
+            <field name="gender">Male</field>
+            <field name="birth_date" eval="datetime.date(2000,11,6)"/>
+            <field name="faculty">Information Technology</field>
+            <!-- <field name="class_ids" eval="[class_0, class_1]"/> -->
+          </record>
+
+          <record id="student_4" model="web_school.student">
+            <field name="name">Adam</field>
+            <field name="gender">Male</field>
+            <field name="birth_date" eval="datetime.date(2000,6,1)"/>
+            <field name="faculty">Information Technology</field>
+            <!-- <field name="class_ids" eval="[class_0, class_1]"/> -->
+          </record>
+
+          <!-- Classes -->
+          <record id="class_0" model="web_school.class">
+            <field name="name">Math</field>
+            <field name="professor">Monty Python</field>
+            <!-- <field name="student_ids" eval="[ref('student_1'), ref('student2')]"/> -->
+          </record>
+
+          <record id="class_1" model="web_school.class">
+            <field name="name">Programming</field>
+            <field name="professor">Bjarne Stroustrup</field>
+            <!-- <field name="student_ids" eval="[ref('student_3'), ref('student_2'), ref('student_4')]"/> -->
+          </record>
+
+          <record id="class_2" model="web_school.class">
+            <field name="name">Physics</field>
+            <field name="professor">Bruce Lee</field>
+            <!-- <field name="student_ids" eval="[ref('student_3'), student_2]"/> -->
+          </record>
+
+    </data>
+</odoo>

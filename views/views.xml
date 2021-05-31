@@ -1,0 +1,82 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="web_school.list">
+      <field name="name">student list</field>
+      <field name="model">web_school.student</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="gender"/>
+          <field name="birth_date"/>
+          <field name="faculty"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- <record model="ir.ui.view" id="web_school.class.list">
+      <field name="name">web_school_class list</field>
+      <field name="model">web_school.class</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="professor"/>
+        </tree>
+      </field>
+    </record> -->
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="web_school.action_window">
+      <field name="name">Student</field>
+      <field name="res_model">web_school.student</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- <record model="ir.actions.act_window" id="web_school.class.action_window">
+      <field name="name">Class</field>
+      <field name="res_model">web_school.class</field>
+      <field name="view_mode">tree,form</field>
+    </record> -->
+
+
+    <!-- server action to the one above -->
+
+    <!-- <record model="ir.actions.server" id="web_school.action_server">
+      <field name="name">web_school server</field>
+      <field name="model_id" ref="model_web_school_web_school"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record> -->
+
+
+    <!-- Top menu item -->
+
+    <menuitem name="School" id="web_school.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem 
+          name="Students" 
+          id="web_school.menu_1" 
+          parent="web_school.menu_root" 
+          action="web_school.action_window"/>
+    <!-- <menuitem name="Classes" id="web_school.class_category" parent="web_school.menu_root" action="web_school.class.action_window"/> -->
+
+    <!-- actions -->
+
+    <!-- <menuitem name="List" id="web_school.menu_1_list" parent="web_school.menu_1"
+              action="web_school.action_window"/>
+    <menuitem name="Server to list" id="web_school" parent="web_school.menu_2"
+              action="web_school.action_server"/> -->
+
+  </data>
+</odoo>
